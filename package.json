@@ -1,0 +1,29 @@
+{
+  "name": "afraley.github.io",
+  "version": "1.0.0",
+  "description": "A Github Site",
+  "main": "index.html",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo 'Hello'",
+    "build": "gulp && gulp assets && gulp fonts && gulp img && gulp tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aFraley/aFraley.github.io.git"
+  },
+  "keywords": [
+    "gitpage"
+  ],
+  "author": "Alan Fraley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aFraley/aFraley.github.io/issues"
+  },
+  "homepage": "https://github.com/aFraley/aFraley.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
