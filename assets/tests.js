@@ -125,6 +125,15 @@ define('git-site/tests/router.jshint', ['exports'], function (exports) {
     assert.ok(true, 'router.js should pass jshint.');
   });
 });
+define('git-site/tests/routes/about.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/about.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/about.js should pass jshint.');
+  });
+});
 define('git-site/tests/routes/application.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -132,6 +141,15 @@ define('git-site/tests/routes/application.jshint', ['exports'], function (export
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'routes/application.js should pass jshint.');
+  });
+});
+define('git-site/tests/routes/index.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | routes/index.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'routes/index.js should pass jshint.');
   });
 });
 define('git-site/tests/test-helper', ['exports', 'git-site/tests/helpers/resolver', 'ember-qunit'], function (exports, _gitSiteTestsHelpersResolver, _emberQunit) {
@@ -145,6 +163,27 @@ define('git-site/tests/test-helper.jshint', ['exports'], function (exports) {
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'test-helper.js should pass jshint.');
+  });
+});
+define('git-site/tests/unit/routes/about-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:about', 'Unit | Route | about', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('git-site/tests/unit/routes/about-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/about-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/about-test.js should pass jshint.');
   });
 });
 define('git-site/tests/unit/routes/application-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
@@ -166,6 +205,27 @@ define('git-site/tests/unit/routes/application-test.jshint', ['exports'], functi
   QUnit.test('should pass jshint', function (assert) {
     assert.expect(1);
     assert.ok(true, 'unit/routes/application-test.js should pass jshint.');
+  });
+});
+define('git-site/tests/unit/routes/index-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:index', 'Unit | Route | index', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('git-site/tests/unit/routes/index-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint | unit/routes/index-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/routes/index-test.js should pass jshint.');
   });
 });
 /* jshint ignore:start */
