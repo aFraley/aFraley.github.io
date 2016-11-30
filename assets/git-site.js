@@ -629,7 +629,7 @@ define("git-site/templates/about", ["exports"], function (exports) {
             "column": 0
           },
           "end": {
-            "line": 31,
+            "line": 59,
             "column": 0
           }
         },
@@ -646,99 +646,243 @@ define("git-site/templates/about", ["exports"], function (exports) {
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("div");
-        dom.setAttribute(el2, "class", "col-md-8");
-        var el3 = dom.createTextNode("\n    ");
-        dom.appendChild(el2, el3);
-        var el3 = dom.createElement("div");
-        dom.setAttribute(el3, "class", "panel panel-default");
-        var el4 = dom.createTextNode("\n      ");
-        dom.appendChild(el3, el4);
-        var el4 = dom.createElement("div");
-        dom.setAttribute(el4, "class", "panel-heading");
-        var el5 = dom.createTextNode("\n        ");
-        dom.appendChild(el4, el5);
-        var el5 = dom.createElement("h1");
-        var el6 = dom.createTextNode("About Me");
-        dom.appendChild(el5, el6);
-        dom.appendChild(el4, el5);
-        var el5 = dom.createTextNode("\n      ");
-        dom.appendChild(el4, el5);
-        dom.appendChild(el3, el4);
-        var el4 = dom.createTextNode("\n      ");
-        dom.appendChild(el3, el4);
-        var el4 = dom.createElement("div");
-        dom.setAttribute(el4, "class", "panel-body");
-        var el5 = dom.createTextNode("\n        ");
-        dom.appendChild(el4, el5);
-        var el5 = dom.createElement("h4");
-        var el6 = dom.createTextNode("I am a hardworking teamplayer with a gift for abstacting ideas and\n          problems to their core components.\n        ");
-        dom.appendChild(el5, el6);
-        dom.appendChild(el4, el5);
-        var el5 = dom.createTextNode("\n        ");
-        dom.appendChild(el4, el5);
-        var el5 = dom.createElement("hr");
-        dom.appendChild(el4, el5);
-        var el5 = dom.createTextNode("\n        ");
-        dom.appendChild(el4, el5);
-        var el5 = dom.createElement("p");
-        var el6 = dom.createTextNode("My Repos include mostly include kits that I use\n          to speed up the initial setup time of projects.\n        ");
-        dom.appendChild(el5, el6);
-        dom.appendChild(el4, el5);
-        var el5 = dom.createTextNode("\n      ");
-        dom.appendChild(el4, el5);
-        dom.appendChild(el3, el4);
-        var el4 = dom.createTextNode("\n    ");
-        dom.appendChild(el3, el4);
-        dom.appendChild(el2, el3);
+        dom.setAttribute(el2, "class", "row");
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("div");
-        dom.setAttribute(el2, "class", "col-md-4");
-        var el3 = dom.createTextNode("\n    ");
-        dom.appendChild(el2, el3);
         var el3 = dom.createElement("div");
-        dom.setAttribute(el3, "class", "well");
+        dom.setAttribute(el3, "class", "col-md-8");
         var el4 = dom.createTextNode("\n      ");
         dom.appendChild(el3, el4);
-        var el4 = dom.createElement("h4");
-        var el5 = dom.createTextNode("Git Hub Repositories");
+        var el4 = dom.createElement("h1");
+        dom.setAttribute(el4, "class", "page-header");
+        var el5 = dom.createTextNode("Repositories");
         dom.appendChild(el4, el5);
         dom.appendChild(el3, el4);
-        var el4 = dom.createTextNode("\n      ");
+        var el4 = dom.createTextNode("\n        ");
         dom.appendChild(el3, el4);
-        var el4 = dom.createElement("ul");
-        var el5 = dom.createTextNode("\n        ");
+        var el4 = dom.createElement("h2");
+        var el5 = dom.createElement("a");
+        dom.setAttribute(el5, "href", "https://github.com/aFraley/django-kit");
+        var el6 = dom.createTextNode("Django Kit");
+        dom.appendChild(el5, el6);
         dom.appendChild(el4, el5);
-        var el5 = dom.createElement("li");
-        var el6 = dom.createTextNode("\n          ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n          ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("p");
+        var el5 = dom.createTextNode("Django Kit is a kit designed to save some time in the project\n            development cycle by providing some of the most common tools\n            used with Django.\n          ");
+        dom.appendChild(el4, el5);
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n          ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("h3");
+        var el5 = dom.createTextNode("DK Requires the following dependencies.");
+        dom.appendChild(el4, el5);
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n          ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("dl");
+        var el5 = dom.createTextNode("\n            ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("dt");
+        var el6 = dom.createTextNode("\n              ");
         dom.appendChild(el5, el6);
         var el6 = dom.createElement("a");
-        dom.setAttribute(el6, "href", "https://github.com/aFraley/django-kit");
-        var el7 = dom.createTextNode("Django Starter Kit");
+        dom.setAttribute(el6, "href", "http://www.celeryproject.org/");
+        var el7 = dom.createTextNode("Celery");
+        dom.appendChild(el6, el7);
+        dom.appendChild(el5, el6);
+        var el6 = dom.createTextNode("\n            ");
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n            ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("dd");
+        var el6 = dom.createTextNode("A Distributed task que for asyncronous tasks and periodic tasks.\n            ");
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n            ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("dt");
+        var el6 = dom.createTextNode("\n              ");
+        dom.appendChild(el5, el6);
+        var el6 = dom.createElement("a");
+        dom.setAttribute(el6, "href", "http://www.django-rest-framework.org/");
+        var el7 = dom.createTextNode("Django Rest Framework");
+        dom.appendChild(el6, el7);
+        dom.appendChild(el5, el6);
+        var el6 = dom.createTextNode("\n            ");
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n            ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("dd");
+        var el6 = dom.createTextNode("A powerful and flexible toolkit for building REST APIs.");
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n        ");
+        dom.appendChild(el4, el5);
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n        ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("h3");
+        var el5 = dom.createTextNode("To get started");
+        dom.appendChild(el4, el5);
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n        ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("ol");
+        dom.setAttribute(el4, "type", "1");
+        var el5 = dom.createTextNode("\n          ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("li");
+        var el6 = dom.createElement("code");
+        var el7 = dom.createTextNode("$ git clone https://github.com/aFraley/django-kit");
+        dom.appendChild(el6, el7);
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n          ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("li");
+        var el6 = dom.createElement("code");
+        var el7 = dom.createTextNode("$ cd django-kit");
+        dom.appendChild(el6, el7);
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n          ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("li");
+        var el6 = dom.createElement("code");
+        var el7 = dom.createTextNode("$ python3 -m virtualenv venv");
+        dom.appendChild(el6, el7);
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n          ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("li");
+        var el6 = dom.createElement("code");
+        var el7 = dom.createTextNode("$ . venv/bin/activate");
+        dom.appendChild(el6, el7);
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n          ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("li");
+        var el6 = dom.createElement("code");
+        var el7 = dom.createTextNode("pip install -r requirements.txt");
+        dom.appendChild(el6, el7);
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n        ");
+        dom.appendChild(el4, el5);
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n        ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("p");
+        var el5 = dom.createTextNode("You will want to ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("code");
+        var el6 = dom.createTextNode("rm -rf .git");
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode(" to remove git directory.\n          so you can create a new one.");
+        dom.appendChild(el4, el5);
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n          ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("p");
+        var el5 = dom.createTextNode("And you will want to ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("code");
+        var el6 = dom.createTextNode("git init");
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode(" to create a new one.\n            Be sure to ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("code");
+        var el6 = dom.createTextNode("echo 'venv/' >> .gitignore");
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode(" so you don't\n            upload your virtual environment to github.");
+        dom.appendChild(el4, el5);
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n      ");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n      ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("div");
+        dom.setAttribute(el3, "class", "col-md-4");
+        var el4 = dom.createTextNode("\n        ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("div");
+        dom.setAttribute(el4, "class", "well");
+        var el5 = dom.createTextNode("\n          ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("h4");
+        var el6 = dom.createTextNode("Git Hub Repositories");
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n          ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("ul");
+        var el6 = dom.createTextNode("\n            ");
+        dom.appendChild(el5, el6);
+        var el6 = dom.createElement("li");
+        var el7 = dom.createTextNode("\n              ");
+        dom.appendChild(el6, el7);
+        var el7 = dom.createElement("a");
+        dom.setAttribute(el7, "href", "https://github.com/aFraley/django-kit");
+        var el8 = dom.createTextNode("Django Starter Kit");
+        dom.appendChild(el7, el8);
+        dom.appendChild(el6, el7);
+        var el7 = dom.createTextNode("\n              ");
+        dom.appendChild(el6, el7);
+        var el7 = dom.createElement("p");
+        var el8 = dom.createTextNode("Includes Django Rest Framework and Celery");
+        dom.appendChild(el7, el8);
+        dom.appendChild(el6, el7);
+        var el7 = dom.createTextNode("\n            ");
+        dom.appendChild(el6, el7);
+        dom.appendChild(el5, el6);
+        var el6 = dom.createTextNode("\n            ");
+        dom.appendChild(el5, el6);
+        var el6 = dom.createElement("li");
+        var el7 = dom.createTextNode("\n              ");
+        dom.appendChild(el6, el7);
+        var el7 = dom.createElement("a");
+        dom.setAttribute(el7, "href", "https://github.com/aFraley/react-gulpfile");
+        var el8 = dom.createTextNode("React Gulpfile");
+        dom.appendChild(el7, el8);
+        dom.appendChild(el6, el7);
+        var el7 = dom.createTextNode("\n              ");
+        dom.appendChild(el6, el7);
+        var el7 = dom.createElement("p");
+        var el8 = dom.createTextNode("A Gulpfile to compile your React project to the desired\n                directory. ");
+        dom.appendChild(el7, el8);
+        var el8 = dom.createElement("small");
+        var el9 = dom.createTextNode("Includes:\n                  babel, browserify and gulp--of course\n                ");
+        dom.appendChild(el8, el9);
+        dom.appendChild(el7, el8);
+        var el8 = dom.createTextNode("\n              ");
+        dom.appendChild(el7, el8);
+        dom.appendChild(el6, el7);
+        var el7 = dom.createTextNode("\n            ");
         dom.appendChild(el6, el7);
         dom.appendChild(el5, el6);
         var el6 = dom.createTextNode("\n          ");
         dom.appendChild(el5, el6);
-        var el6 = dom.createElement("p");
-        var el7 = dom.createTextNode("Includes Django Rest Framework and Celery");
-        dom.appendChild(el6, el7);
-        dom.appendChild(el5, el6);
-        var el6 = dom.createTextNode("\n        ");
-        dom.appendChild(el5, el6);
         dom.appendChild(el4, el5);
-        var el5 = dom.createTextNode("\n      ");
+        var el5 = dom.createTextNode("\n        ");
         dom.appendChild(el4, el5);
         dom.appendChild(el3, el4);
-        var el4 = dom.createTextNode("\n    ");
+        var el4 = dom.createTextNode("\n      ");
         dom.appendChild(el3, el4);
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n");
+        var el2 = dom.createTextNode("\n\n");
         dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
@@ -754,7 +898,7 @@ define("git-site/templates/about", ["exports"], function (exports) {
         morphs[0] = dom.createMorphAt(fragment, 2, 2, contextualElement);
         return morphs;
       },
-      statements: [["content", "outlet", ["loc", [null, [30, 0], [30, 10]]], 0, 0, 0, 0]],
+      statements: [["content", "outlet", ["loc", [null, [58, 0], [58, 10]]], 0, 0, 0, 0]],
       locals: [],
       templates: []
     };
@@ -4544,8 +4688,8 @@ define("git-site/templates/components/nav-bar", ["exports"], function (exports) 
               "column": 12
             },
             "end": {
-              "line": 12,
-              "column": 61
+              "line": 14,
+              "column": 12
             }
           },
           "moduleName": "git-site/templates/components/nav-bar.hbs"
@@ -4556,7 +4700,7 @@ define("git-site/templates/components/nav-bar", ["exports"], function (exports) 
         hasRendered: false,
         buildFragment: function buildFragment(dom) {
           var el0 = dom.createDocumentFragment();
-          var el1 = dom.createTextNode("Git Site");
+          var el1 = dom.createTextNode("              aFraley on Github\n");
           dom.appendChild(el0, el1);
           return el0;
         },
@@ -4575,12 +4719,12 @@ define("git-site/templates/components/nav-bar", ["exports"], function (exports) 
           "loc": {
             "source": null,
             "start": {
-              "line": 18,
+              "line": 20,
               "column": 20
             },
             "end": {
-              "line": 18,
-              "column": 45
+              "line": 20,
+              "column": 61
             }
           },
           "moduleName": "git-site/templates/components/nav-bar.hbs"
@@ -4591,7 +4735,7 @@ define("git-site/templates/components/nav-bar", ["exports"], function (exports) 
         hasRendered: false,
         buildFragment: function buildFragment(dom) {
           var el0 = dom.createDocumentFragment();
-          var el1 = dom.createTextNode("About");
+          var el1 = dom.createTextNode("Featured Repositories");
           dom.appendChild(el0, el1);
           return el0;
         },
@@ -4613,7 +4757,7 @@ define("git-site/templates/components/nav-bar", ["exports"], function (exports) 
             "column": 0
           },
           "end": {
-            "line": 26,
+            "line": 28,
             "column": 0
           }
         },
@@ -4630,7 +4774,7 @@ define("git-site/templates/components/nav-bar", ["exports"], function (exports) 
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         var el1 = dom.createElement("nav");
-        dom.setAttribute(el1, "class", "navbar navbar-inverse navbar-fixed-top");
+        dom.setAttribute(el1, "class", "navbar navbar-default navbar-fixed-top");
         dom.setAttribute(el1, "role", "navigation");
         var el2 = dom.createTextNode("\n    ");
         dom.appendChild(el1, el2);
@@ -4676,11 +4820,11 @@ define("git-site/templates/components/nav-bar", ["exports"], function (exports) 
         var el5 = dom.createTextNode("\n            ");
         dom.appendChild(el4, el5);
         dom.appendChild(el3, el4);
-        var el4 = dom.createTextNode("\n            ");
+        var el4 = dom.createTextNode("\n");
         dom.appendChild(el3, el4);
         var el4 = dom.createComment("");
         dom.appendChild(el3, el4);
-        var el4 = dom.createTextNode("\n        ");
+        var el4 = dom.createTextNode("        ");
         dom.appendChild(el3, el4);
         dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n        ");
@@ -4737,7 +4881,7 @@ define("git-site/templates/components/nav-bar", ["exports"], function (exports) 
         morphs[1] = dom.createMorphAt(dom.childAt(element0, [7, 1, 1]), 1, 1);
         return morphs;
       },
-      statements: [["block", "link-to", ["index"], ["class", "navbar-brand"], 0, null, ["loc", [null, [12, 12], [12, 73]]]], ["block", "link-to", ["about"], [], 1, null, ["loc", [null, [18, 20], [18, 57]]]]],
+      statements: [["block", "link-to", ["index"], ["class", "navbar-brand"], 0, null, ["loc", [null, [12, 12], [14, 24]]]], ["block", "link-to", ["about"], [], 1, null, ["loc", [null, [20, 20], [20, 73]]]]],
       locals: [],
       templates: [child0, child1]
     };
@@ -4755,7 +4899,7 @@ define("git-site/templates/index", ["exports"], function (exports) {
             "column": 0
           },
           "end": {
-            "line": 11,
+            "line": 25,
             "column": 0
           }
         },
@@ -4772,16 +4916,41 @@ define("git-site/templates/index", ["exports"], function (exports) {
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("div");
-        dom.setAttribute(el2, "class", "panel panel-default");
+        dom.setAttribute(el2, "class", "jumbotron");
+        var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("h1");
+        dom.setAttribute(el3, "class", "text-center");
+        var el4 = dom.createTextNode("aFraley on Github");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n  ");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n  ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("div");
+        dom.setAttribute(el2, "class", "row");
         var el3 = dom.createTextNode("\n    ");
         dom.appendChild(el2, el3);
         var el3 = dom.createElement("div");
-        dom.setAttribute(el3, "class", "panel-heading");
+        dom.setAttribute(el3, "class", "col-md-6");
         var el4 = dom.createTextNode("\n      ");
         dom.appendChild(el3, el4);
-        var el4 = dom.createElement("h1");
-        dom.setAttribute(el4, "class", "text-center");
-        var el5 = dom.createTextNode("Hello, Github.");
+        var el4 = dom.createElement("h2");
+        var el5 = dom.createTextNode("About Me");
+        dom.appendChild(el4, el5);
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n      ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("p");
+        var el5 = dom.createTextNode("I recently graduated from Northwest Technical Institute,\n        where I studied Information Systems. At NTI we learned\n        Network Administration, DataBase Administration, Project Life Cycles,\n        Computer Repair and Software Design--");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("em");
+        var el6 = dom.createTextNode("my passion");
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode(".\n      ");
         dom.appendChild(el4, el5);
         dom.appendChild(el3, el4);
         var el4 = dom.createTextNode("\n    ");
@@ -4790,12 +4959,27 @@ define("git-site/templates/index", ["exports"], function (exports) {
         var el3 = dom.createTextNode("\n    ");
         dom.appendChild(el2, el3);
         var el3 = dom.createElement("div");
-        dom.setAttribute(el3, "class", "panel-body");
+        dom.setAttribute(el3, "class", "col-md-6");
         var el4 = dom.createTextNode("\n      ");
         dom.appendChild(el3, el4);
-        var el4 = dom.createElement("h2");
-        dom.setAttribute(el4, "class", "text-center");
-        var el5 = dom.createTextNode("More to come, soon.");
+        var el4 = dom.createElement("br");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n      ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("blockquote");
+        var el5 = dom.createTextNode("\n        ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("p");
+        var el6 = dom.createTextNode("We can only see a short distance ahead, but we can see plenty there\n          that needs to be done.\n        ");
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n        ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("footer");
+        var el6 = dom.createTextNode("Alan Turing");
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n      ");
         dom.appendChild(el4, el5);
         dom.appendChild(el3, el4);
         var el4 = dom.createTextNode("\n    ");
