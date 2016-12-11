@@ -629,7 +629,7 @@ define("git-site/templates/about", ["exports"], function (exports) {
             "column": 0
           },
           "end": {
-            "line": 58,
+            "line": 59,
             "column": 0
           }
         },
@@ -746,6 +746,14 @@ define("git-site/templates/about", ["exports"], function (exports) {
         var el5 = dom.createElement("li");
         var el6 = dom.createElement("code");
         var el7 = dom.createTextNode("$ . venv/bin/activate");
+        dom.appendChild(el6, el7);
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n          ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("li");
+        var el6 = dom.createElement("code");
+        var el7 = dom.createTextNode("$ pip install django");
         dom.appendChild(el6, el7);
         dom.appendChild(el5, el6);
         dom.appendChild(el4, el5);
@@ -880,7 +888,7 @@ define("git-site/templates/about", ["exports"], function (exports) {
         morphs[0] = dom.createMorphAt(fragment, 2, 2, contextualElement);
         return morphs;
       },
-      statements: [["content", "outlet", ["loc", [null, [57, 0], [57, 10]]], 0, 0, 0, 0]],
+      statements: [["content", "outlet", ["loc", [null, [58, 0], [58, 10]]], 0, 0, 0, 0]],
       locals: [],
       templates: []
     };
