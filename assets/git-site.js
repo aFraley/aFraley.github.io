@@ -629,7 +629,7 @@ define("git-site/templates/about", ["exports"], function (exports) {
             "column": 0
           },
           "end": {
-            "line": 59,
+            "line": 53,
             "column": 0
           }
         },
@@ -662,21 +662,21 @@ define("git-site/templates/about", ["exports"], function (exports) {
         dom.appendChild(el3, el4);
         var el4 = dom.createElement("h2");
         var el5 = dom.createElement("a");
-        dom.setAttribute(el5, "href", "https://github.com/aFraley/django-kit");
-        var el6 = dom.createTextNode("Django Kit");
+        dom.setAttribute(el5, "href", "https://github.com/aFraley/tiny-django");
+        var el6 = dom.createTextNode("Tiny Django");
         dom.appendChild(el5, el6);
         dom.appendChild(el4, el5);
         dom.appendChild(el3, el4);
         var el4 = dom.createTextNode("\n          ");
         dom.appendChild(el3, el4);
         var el4 = dom.createElement("p");
-        var el5 = dom.createTextNode("Django Kit is a Django 1.10 Project Template that comes with Celery 4,\n            Django Rest Framework 3 configuration included.\n          ");
+        var el5 = dom.createTextNode("A stripped down Django project template.\n          ");
         dom.appendChild(el4, el5);
         dom.appendChild(el3, el4);
         var el4 = dom.createTextNode("\n          ");
         dom.appendChild(el3, el4);
         var el4 = dom.createElement("h3");
-        var el5 = dom.createTextNode("DK Requires the following dependencies.");
+        var el5 = dom.createTextNode("Dependencies");
         dom.appendChild(el4, el5);
         dom.appendChild(el3, el4);
         var el4 = dom.createTextNode("\n          ");
@@ -688,36 +688,11 @@ define("git-site/templates/about", ["exports"], function (exports) {
         var el6 = dom.createTextNode("\n              ");
         dom.appendChild(el5, el6);
         var el6 = dom.createElement("a");
-        dom.setAttribute(el6, "href", "http://www.celeryproject.org/");
-        var el7 = dom.createTextNode("Celery");
+        dom.setAttribute(el6, "href", "https://www.djangoproject.com/");
+        var el7 = dom.createTextNode("Django");
         dom.appendChild(el6, el7);
         dom.appendChild(el5, el6);
         var el6 = dom.createTextNode("\n            ");
-        dom.appendChild(el5, el6);
-        dom.appendChild(el4, el5);
-        var el5 = dom.createTextNode("\n            ");
-        dom.appendChild(el4, el5);
-        var el5 = dom.createElement("dd");
-        var el6 = dom.createTextNode("A Distributed task que for asyncronous tasks and periodic tasks.\n            ");
-        dom.appendChild(el5, el6);
-        dom.appendChild(el4, el5);
-        var el5 = dom.createTextNode("\n            ");
-        dom.appendChild(el4, el5);
-        var el5 = dom.createElement("dt");
-        var el6 = dom.createTextNode("\n              ");
-        dom.appendChild(el5, el6);
-        var el6 = dom.createElement("a");
-        dom.setAttribute(el6, "href", "http://www.django-rest-framework.org/");
-        var el7 = dom.createTextNode("Django Rest Framework");
-        dom.appendChild(el6, el7);
-        dom.appendChild(el5, el6);
-        var el6 = dom.createTextNode("\n            ");
-        dom.appendChild(el5, el6);
-        dom.appendChild(el4, el5);
-        var el5 = dom.createTextNode("\n            ");
-        dom.appendChild(el4, el5);
-        var el5 = dom.createElement("dd");
-        var el6 = dom.createTextNode("A powerful and flexible toolkit for building REST APIs.");
         dom.appendChild(el5, el6);
         dom.appendChild(el4, el5);
         var el5 = dom.createTextNode("\n        ");
@@ -729,10 +704,32 @@ define("git-site/templates/about", ["exports"], function (exports) {
         var el5 = dom.createTextNode("To get started");
         dom.appendChild(el4, el5);
         dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n          ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("p");
+        var el5 = dom.createTextNode("Using a bash console:");
+        dom.appendChild(el4, el5);
+        dom.appendChild(el3, el4);
         var el4 = dom.createTextNode("\n        ");
         dom.appendChild(el3, el4);
         var el4 = dom.createElement("ol");
         dom.setAttribute(el4, "type", "1");
+        var el5 = dom.createTextNode("\n          ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("li");
+        var el6 = dom.createElement("code");
+        var el7 = dom.createTextNode("$ mkdir my_project");
+        dom.appendChild(el6, el7);
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n          ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("li");
+        var el6 = dom.createElement("code");
+        var el7 = dom.createTextNode("$ cd my_project");
+        dom.appendChild(el6, el7);
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
         var el5 = dom.createTextNode("\n          ");
         dom.appendChild(el4, el5);
         var el5 = dom.createElement("li");
@@ -761,29 +758,7 @@ define("git-site/templates/about", ["exports"], function (exports) {
         dom.appendChild(el4, el5);
         var el5 = dom.createElement("li");
         var el6 = dom.createElement("code");
-        var el7 = dom.createTextNode("$ django-admin startproject --template=https://github.com/aFraley/django-kit/archive/master.zip [project name]");
-        dom.appendChild(el6, el7);
-        dom.appendChild(el5, el6);
-        dom.appendChild(el4, el5);
-        var el5 = dom.createTextNode("\n          ");
-        dom.appendChild(el4, el5);
-        var el5 = dom.createElement("li");
-        var el6 = dom.createElement("code");
-        var el7 = dom.createTextNode("$ touch requirements.txt");
-        dom.appendChild(el6, el7);
-        dom.appendChild(el5, el6);
-        dom.appendChild(el4, el5);
-        var el5 = dom.createTextNode("\n          ");
-        dom.appendChild(el4, el5);
-        var el5 = dom.createElement("li");
-        var el6 = dom.createTextNode("Copy the contents of the requirements.txt file in the repo to the\n            requirements.txt you just created.");
-        dom.appendChild(el5, el6);
-        dom.appendChild(el4, el5);
-        var el5 = dom.createTextNode("\n          ");
-        dom.appendChild(el4, el5);
-        var el5 = dom.createElement("li");
-        var el6 = dom.createElement("code");
-        var el7 = dom.createTextNode("$ pip install -r requirements.txt");
+        var el7 = dom.createTextNode("$ django-admin.py startproject --template=https://github.com/aFraley/tiny-django/archive/latest.zip");
         dom.appendChild(el6, el7);
         dom.appendChild(el5, el6);
         dom.appendChild(el4, el5);
@@ -793,7 +768,13 @@ define("git-site/templates/about", ["exports"], function (exports) {
         var el4 = dom.createTextNode("\n        ");
         dom.appendChild(el3, el4);
         var el4 = dom.createElement("p");
-        var el5 = dom.createTextNode("Now you can get started on your project without worrying about some\n          of the repetitive configuration that goes into setting up a more complex\n          Django Application.");
+        var el5 = dom.createTextNode("First, we create a directory to work in; then, we create a python virtual environment after changing to the\n        created directory. We activate the virtual environment and install Django. Now, we start a new project, but\n        we tell Django to use our stripped down version as a template to setup our project.\n        ");
+        dom.appendChild(el4, el5);
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n        ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("p");
+        var el5 = dom.createTextNode("This stripped down version is good for smaller projects, but it also helps us get a feel for what Django\n        does, how it works.\n        ");
         dom.appendChild(el4, el5);
         dom.appendChild(el3, el4);
         var el4 = dom.createTextNode("\n      ");
@@ -822,14 +803,14 @@ define("git-site/templates/about", ["exports"], function (exports) {
         var el7 = dom.createTextNode("\n              ");
         dom.appendChild(el6, el7);
         var el7 = dom.createElement("a");
-        dom.setAttribute(el7, "href", "https://github.com/aFraley/django-kit");
-        var el8 = dom.createTextNode("Django Starter Kit");
+        dom.setAttribute(el7, "href", "https://github.com/aFraley/tiny-django");
+        var el8 = dom.createTextNode("Tiny Django");
         dom.appendChild(el7, el8);
         dom.appendChild(el6, el7);
         var el7 = dom.createTextNode("\n              ");
         dom.appendChild(el6, el7);
         var el7 = dom.createElement("p");
-        var el8 = dom.createTextNode("Includes Django Rest Framework and Celery");
+        var el8 = dom.createTextNode("A stripped down Django project template.");
         dom.appendChild(el7, el8);
         dom.appendChild(el6, el7);
         var el7 = dom.createTextNode("\n            ");
@@ -848,13 +829,7 @@ define("git-site/templates/about", ["exports"], function (exports) {
         var el7 = dom.createTextNode("\n              ");
         dom.appendChild(el6, el7);
         var el7 = dom.createElement("p");
-        var el8 = dom.createTextNode("A Gulpfile to compile your React project to the desired\n                directory. ");
-        dom.appendChild(el7, el8);
-        var el8 = dom.createElement("small");
-        var el9 = dom.createTextNode("Includes:\n                  babel, browserify and gulp--of course\n                ");
-        dom.appendChild(el8, el9);
-        dom.appendChild(el7, el8);
-        var el8 = dom.createTextNode("\n              ");
+        var el8 = dom.createTextNode("A Gulpfile to compile your React project to the desired\n                directory.\n              ");
         dom.appendChild(el7, el8);
         dom.appendChild(el6, el7);
         var el7 = dom.createTextNode("\n            ");
@@ -888,7 +863,7 @@ define("git-site/templates/about", ["exports"], function (exports) {
         morphs[0] = dom.createMorphAt(fragment, 2, 2, contextualElement);
         return morphs;
       },
-      statements: [["content", "outlet", ["loc", [null, [58, 0], [58, 10]]], 0, 0, 0, 0]],
+      statements: [["content", "outlet", ["loc", [null, [52, 0], [52, 10]]], 0, 0, 0, 0]],
       locals: [],
       templates: []
     };
