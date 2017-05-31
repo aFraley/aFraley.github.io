@@ -758,7 +758,7 @@ define("git-site/templates/about", ["exports"], function (exports) {
         dom.appendChild(el4, el5);
         var el5 = dom.createElement("li");
         var el6 = dom.createElement("code");
-        var el7 = dom.createTextNode("$ django-admin.py startproject --template=https://github.com/aFraley/tiny-django/archive/latest.zip");
+        var el7 = dom.createTextNode("$ django-admin startproject --template=https://github.com/aFraley/tiny-django/archive/master.zip myapp");
         dom.appendChild(el6, el7);
         dom.appendChild(el5, el6);
         dom.appendChild(el4, el5);
