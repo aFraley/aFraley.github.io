@@ -615,6 +615,7 @@ define('git-site/router', ['exports', 'ember', 'git-site/config/environment'], f
 
   Router.map(function () {
     this.route('about');
+    this.route('blog');
   });
 
   exports['default'] = Router;
@@ -623,6 +624,9 @@ define('git-site/routes/about', ['exports', 'ember'], function (exports, _ember)
   exports['default'] = _ember['default'].Route.extend({});
 });
 define('git-site/routes/application', ['exports', 'ember'], function (exports, _ember) {
+  exports['default'] = _ember['default'].Route.extend({});
+});
+define('git-site/routes/blog', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Route.extend({});
 });
 define('git-site/routes/index', ['exports', 'ember'], function (exports, _ember) {
@@ -930,6 +934,104 @@ define("git-site/templates/application", ["exports"], function (exports) {
         return morphs;
       },
       statements: [["content", "nav-bar", ["loc", [null, [1, 0], [1, 11]]], 0, 0, 0, 0], ["content", "outlet", ["loc", [null, [3, 0], [3, 10]]], 0, 0, 0, 0]],
+      locals: [],
+      templates: []
+    };
+  })());
+});
+define("git-site/templates/blog", ["exports"], function (exports) {
+  exports["default"] = Ember.HTMLBars.template((function () {
+    return {
+      meta: {
+        "revision": "Ember@2.9.1",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 18,
+            "column": 0
+          }
+        },
+        "moduleName": "git-site/templates/blog.hbs"
+      },
+      isEmpty: false,
+      arity: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      buildFragment: function buildFragment(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1, "class", "container");
+        var el2 = dom.createTextNode("\n    ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("h1");
+        dom.setAttribute(el2, "class", "page-header");
+        var el3 = dom.createElement("a");
+        dom.setAttribute(el3, "href", "https://hirelofty.com/blog/");
+        var el4 = dom.createTextNode("The Machines Are Still Subserviant");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n    ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("div");
+        dom.setAttribute(el2, "class", "row");
+        var el3 = dom.createTextNode("\n        ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("div");
+        dom.setAttribute(el3, "class", "col-md-6");
+        var el4 = dom.createTextNode("\n            ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("div");
+        dom.setAttribute(el4, "class", "well");
+        var el5 = dom.createTextNode("\n                ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("h2");
+        var el6 = dom.createTextNode("My Contributions our Lofty Blog");
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n                ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("ul");
+        var el6 = dom.createTextNode("\n                    ");
+        dom.appendChild(el5, el6);
+        var el6 = dom.createElement("li");
+        var el7 = dom.createTextNode("\n                        ");
+        dom.appendChild(el6, el7);
+        var el7 = dom.createElement("a");
+        dom.setAttribute(el7, "href", "https://hirelofty.com/blog/how-build-custom-command-line-tool-interact-api/");
+        var el8 = dom.createTextNode("\n                            A Custom CLI Tool To Interact With An API\n                        ");
+        dom.appendChild(el7, el8);
+        dom.appendChild(el6, el7);
+        var el7 = dom.createTextNode("\n                    ");
+        dom.appendChild(el6, el7);
+        dom.appendChild(el5, el6);
+        var el6 = dom.createTextNode("\n                ");
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n            ");
+        dom.appendChild(el4, el5);
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n        ");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      buildRenderNodes: function buildRenderNodes() {
+        return [];
+      },
+      statements: [],
       locals: [],
       templates: []
     };
@@ -4708,6 +4810,41 @@ define("git-site/templates/components/nav-bar", ["exports"], function (exports) 
             },
             "end": {
               "line": 20,
+              "column": 43
+            }
+          },
+          "moduleName": "git-site/templates/components/nav-bar.hbs"
+        },
+        isEmpty: false,
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("Blog");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes() {
+          return [];
+        },
+        statements: [],
+        locals: [],
+        templates: []
+      };
+    })();
+    var child2 = (function () {
+      return {
+        meta: {
+          "revision": "Ember@2.9.1",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 23,
+              "column": 20
+            },
+            "end": {
+              "line": 23,
               "column": 61
             }
           },
@@ -4741,7 +4878,7 @@ define("git-site/templates/components/nav-bar", ["exports"], function (exports) 
             "column": 0
           },
           "end": {
-            "line": 28,
+            "line": 31,
             "column": 0
           }
         },
@@ -4834,6 +4971,16 @@ define("git-site/templates/components/nav-bar", ["exports"], function (exports) 
         var el6 = dom.createTextNode("\n                ");
         dom.appendChild(el5, el6);
         dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n                ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("li");
+        var el6 = dom.createTextNode("\n                    ");
+        dom.appendChild(el5, el6);
+        var el6 = dom.createComment("");
+        dom.appendChild(el5, el6);
+        var el6 = dom.createTextNode("                    \n                ");
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
         var el5 = dom.createTextNode("\n            ");
         dom.appendChild(el4, el5);
         dom.appendChild(el3, el4);
@@ -4860,14 +5007,16 @@ define("git-site/templates/components/nav-bar", ["exports"], function (exports) 
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
         var element0 = dom.childAt(fragment, [2, 1]);
-        var morphs = new Array(2);
+        var element1 = dom.childAt(element0, [7, 1]);
+        var morphs = new Array(3);
         morphs[0] = dom.createMorphAt(dom.childAt(element0, [3]), 3, 3);
-        morphs[1] = dom.createMorphAt(dom.childAt(element0, [7, 1, 1]), 1, 1);
+        morphs[1] = dom.createMorphAt(dom.childAt(element1, [1]), 1, 1);
+        morphs[2] = dom.createMorphAt(dom.childAt(element1, [3]), 1, 1);
         return morphs;
       },
-      statements: [["block", "link-to", ["index"], ["class", "navbar-brand"], 0, null, ["loc", [null, [12, 12], [14, 24]]]], ["block", "link-to", ["about"], [], 1, null, ["loc", [null, [20, 20], [20, 73]]]]],
+      statements: [["block", "link-to", ["index"], ["class", "navbar-brand"], 0, null, ["loc", [null, [12, 12], [14, 24]]]], ["block", "link-to", ["blog"], [], 1, null, ["loc", [null, [20, 20], [20, 55]]]], ["block", "link-to", ["about"], [], 2, null, ["loc", [null, [23, 20], [23, 73]]]]],
       locals: [],
-      templates: [child0, child1]
+      templates: [child0, child1, child2]
     };
   })());
 });
@@ -5099,7 +5248,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("git-site/app")["default"].create({"name":"git-site","version":"0.0.0+18d5a37c"});
+  require("git-site/app")["default"].create({"name":"git-site","version":"0.0.0+cf44b754"});
 }
 
 /* jshint ignore:end */
