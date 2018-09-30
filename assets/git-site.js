@@ -313,7 +313,7 @@ define('git-site/components/nav-bar', ['exports', 'ember'], function (exports, _
 });
 define('git-site/controllers/index', ['exports', 'ember'], function (exports, _ember) {
     exports['default'] = _ember['default'].Controller.extend({
-        message: 'I am a Software Engineer at Lofty Labs.',
+        title: 'Software Engineer',
         technology: ['Python and Django', 'Vue', 'React and React Native', 'Ember', 'Elasticsearch', 'Golang and Gin', 'Java and Spring', 'C', 'AWS']
     });
 });
@@ -4880,11 +4880,11 @@ define("git-site/templates/index", ["exports"], function (exports) {
           "loc": {
             "source": null,
             "start": {
-              "line": 23,
+              "line": 22,
               "column": 12
             },
             "end": {
-              "line": 25,
+              "line": 24,
               "column": 12
             }
           },
@@ -4911,7 +4911,7 @@ define("git-site/templates/index", ["exports"], function (exports) {
           morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1]), 0, 0);
           return morphs;
         },
-        statements: [["content", "tech", ["loc", [null, [24, 16], [24, 26]]], 0, 0, 0, 0]],
+        statements: [["content", "tech", ["loc", [null, [23, 16], [23, 26]]], 0, 0, 0, 0]],
         locals: ["tech"],
         templates: []
       };
@@ -4926,7 +4926,7 @@ define("git-site/templates/index", ["exports"], function (exports) {
             "column": 0
           },
           "end": {
-            "line": 32,
+            "line": 31,
             "column": 0
           }
         },
@@ -4994,16 +4994,19 @@ define("git-site/templates/index", ["exports"], function (exports) {
         var el4 = dom.createTextNode("\n      ");
         dom.appendChild(el3, el4);
         var el4 = dom.createElement("h2");
-        var el5 = dom.createTextNode("About Me");
+        var el5 = dom.createElement("a");
+        dom.setAttribute(el5, "href", "https://hirelofty.com/");
+        var el6 = dom.createTextNode("Lofty Labs");
+        dom.appendChild(el5, el6);
         dom.appendChild(el4, el5);
         dom.appendChild(el3, el4);
         var el4 = dom.createTextNode("\n      ");
         dom.appendChild(el3, el4);
-        var el4 = dom.createElement("p");
+        var el4 = dom.createElement("h3");
         var el5 = dom.createComment("");
         dom.appendChild(el4, el5);
         dom.appendChild(el3, el4);
-        var el4 = dom.createTextNode("\n\n      ");
+        var el4 = dom.createTextNode("\n      ");
         dom.appendChild(el3, el4);
         var el4 = dom.createElement("div");
         dom.setAttribute(el4, "class", "panel panel-default");
@@ -5054,7 +5057,7 @@ define("git-site/templates/index", ["exports"], function (exports) {
         morphs[1] = dom.createMorphAt(dom.childAt(element0, [5, 3, 1]), 1, 1);
         return morphs;
       },
-      statements: [["content", "message", ["loc", [null, [17, 9], [17, 22]]], 0, 0, 0, 0], ["block", "each", [["get", "technology", ["loc", [null, [23, 20], [23, 30]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [23, 12], [25, 21]]]]],
+      statements: [["content", "title", ["loc", [null, [17, 10], [17, 19]]], 0, 0, 0, 0], ["block", "each", [["get", "technology", ["loc", [null, [22, 20], [22, 30]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [22, 12], [24, 21]]]]],
       locals: [],
       templates: [child0]
     };
@@ -5096,7 +5099,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("git-site/app")["default"].create({"name":"git-site","version":"0.0.0+15eeae9b"});
+  require("git-site/app")["default"].create({"name":"git-site","version":"0.0.0+18d5a37c"});
 }
 
 /* jshint ignore:end */
