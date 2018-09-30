@@ -311,11 +311,27 @@ define('git-site/components/ember-wormhole', ['exports', 'ember-wormhole/compone
 define('git-site/components/nav-bar', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Component.extend({});
 });
-define('git-site/helpers/app-version', ['exports', 'ember', 'git-site/config/environment'], function (exports, _ember, _gitSiteConfigEnvironment) {
+define('git-site/controllers/index', ['exports', 'ember'], function (exports, _ember) {
+    exports['default'] = _ember['default'].Controller.extend({
+        message: 'I am a Software Engineer at Lofty Labs.',
+        technology: ['Python and Django', 'Vue', 'React and React Native', 'Ember', 'Elasticsearch', 'Golang and Gin', 'Java and Spring', 'C', 'AWS']
+    });
+});
+define('git-site/helpers/app-version', ['exports', 'ember', 'git-site/config/environment', 'ember-cli-app-version/utils/regexp'], function (exports, _ember, _gitSiteConfigEnvironment, _emberCliAppVersionUtilsRegexp) {
   exports.appVersion = appVersion;
   var version = _gitSiteConfigEnvironment['default'].APP.version;
 
-  function appVersion() {
+  function appVersion(_) {
+    var hash = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+
+    if (hash.hideSha) {
+      return version.match(_emberCliAppVersionUtilsRegexp.versionRegExp)[0];
+    }
+
+    if (hash.hideVersion) {
+      return version.match(_emberCliAppVersionUtilsRegexp.shaRegExp)[0];
+    }
+
     return version;
   }
 
@@ -418,8 +434,7 @@ define('git-site/initializers/container-debug-adapter', ['exports', 'ember-resol
     }
   };
 });
-define('git-site/initializers/data-adapter', ['exports', 'ember'], function (exports, _ember) {
-
+define('git-site/initializers/data-adapter', ['exports'], function (exports) {
   /*
     This initializer is here to keep backwards compatibility with code depending
     on the `data-adapter` initializer (before Ember Data was an addon).
@@ -430,10 +445,10 @@ define('git-site/initializers/data-adapter', ['exports', 'ember'], function (exp
   exports['default'] = {
     name: 'data-adapter',
     before: 'store',
-    initialize: _ember['default'].K
+    initialize: function initialize() {}
   };
 });
-define('git-site/initializers/ember-data', ['exports', 'ember-data/setup-container', 'ember-data/-private/core'], function (exports, _emberDataSetupContainer, _emberDataPrivateCore) {
+define('git-site/initializers/ember-data', ['exports', 'ember-data/setup-container', 'ember-data'], function (exports, _emberDataSetupContainer, _emberData) {
 
   /*
   
@@ -449,16 +464,23 @@ define('git-site/initializers/ember-data', ['exports', 'ember-data/setup-contain
   
     For example, imagine an Ember.js application with the following classes:
   
-    App.StoreService = DS.Store.extend({
+    ```app/services/store.js
+    import DS from 'ember-data';
+  
+    export default DS.Store.extend({
       adapter: 'custom'
     });
+    ```
   
-    App.PostsController = Ember.Controller.extend({
+    ```app/controllers/posts.js
+    import { Controller } from '@ember/controller';
+  
+    export default Controller.extend({
       // ...
     });
   
-    When the application is initialized, `App.ApplicationStore` will automatically be
-    instantiated, and the instance of `App.PostsController` will have its `store`
+    When the application is initialized, `ApplicationStore` will automatically be
+    instantiated, and the instance of `PostsController` will have its `store`
     property set to that instance.
   
     Note that this code will only be run if the `ember-application` package is
@@ -518,8 +540,7 @@ define('git-site/initializers/export-application-global', ['exports', 'ember', '
     initialize: initialize
   };
 });
-define('git-site/initializers/injectStore', ['exports', 'ember'], function (exports, _ember) {
-
+define('git-site/initializers/injectStore', ['exports'], function (exports) {
   /*
     This initializer is here to keep backwards compatibility with code depending
     on the `injectStore` initializer (before Ember Data was an addon).
@@ -530,7 +551,7 @@ define('git-site/initializers/injectStore', ['exports', 'ember'], function (expo
   exports['default'] = {
     name: 'injectStore',
     before: 'store',
-    initialize: _ember['default'].K
+    initialize: function initialize() {}
   };
 });
 define('git-site/initializers/load-bootstrap-config', ['exports', 'git-site/config/environment', 'ember-bootstrap/config'], function (exports, _gitSiteConfigEnvironment, _emberBootstrapConfig) {
@@ -548,8 +569,7 @@ define('git-site/initializers/load-bootstrap-config', ['exports', 'git-site/conf
 define('git-site/initializers/modals-container', ['exports', 'ember-bootstrap/initializers/modals-container'], function (exports, _emberBootstrapInitializersModalsContainer) {
   exports['default'] = _emberBootstrapInitializersModalsContainer['default'];
 });
-define('git-site/initializers/store', ['exports', 'ember'], function (exports, _ember) {
-
+define('git-site/initializers/store', ['exports'], function (exports) {
   /*
     This initializer is here to keep backwards compatibility with code depending
     on the `store` initializer (before Ember Data was an addon).
@@ -560,11 +580,10 @@ define('git-site/initializers/store', ['exports', 'ember'], function (exports, _
   exports['default'] = {
     name: 'store',
     after: 'ember-data',
-    initialize: _ember['default'].K
+    initialize: function initialize() {}
   };
 });
-define('git-site/initializers/transforms', ['exports', 'ember'], function (exports, _ember) {
-
+define('git-site/initializers/transforms', ['exports'], function (exports) {
   /*
     This initializer is here to keep backwards compatibility with code depending
     on the `transforms` initializer (before Ember Data was an addon).
@@ -575,13 +594,13 @@ define('git-site/initializers/transforms', ['exports', 'ember'], function (expor
   exports['default'] = {
     name: 'transforms',
     before: 'store',
-    initialize: _ember['default'].K
+    initialize: function initialize() {}
   };
 });
-define("git-site/instance-initializers/ember-data", ["exports", "ember-data/-private/instance-initializers/initialize-store-service"], function (exports, _emberDataPrivateInstanceInitializersInitializeStoreService) {
+define("git-site/instance-initializers/ember-data", ["exports", "ember-data/initialize-store-service"], function (exports, _emberDataInitializeStoreService) {
   exports["default"] = {
     name: "ember-data",
-    initialize: _emberDataPrivateInstanceInitializersInitializeStoreService["default"]
+    initialize: _emberDataInitializeStoreService["default"]
   };
 });
 define('git-site/resolver', ['exports', 'ember-resolver'], function (exports, _emberResolver) {
@@ -4854,6 +4873,49 @@ define("git-site/templates/components/nav-bar", ["exports"], function (exports) 
 });
 define("git-site/templates/index", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
+    var child0 = (function () {
+      return {
+        meta: {
+          "revision": "Ember@2.9.1",
+          "loc": {
+            "source": null,
+            "start": {
+              "line": 23,
+              "column": 12
+            },
+            "end": {
+              "line": 25,
+              "column": 12
+            }
+          },
+          "moduleName": "git-site/templates/index.hbs"
+        },
+        isEmpty: false,
+        arity: 1,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("            ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("li");
+          var el2 = dom.createComment("");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1]), 0, 0);
+          return morphs;
+        },
+        statements: [["content", "tech", ["loc", [null, [24, 16], [24, 26]]], 0, 0, 0, 0]],
+        locals: ["tech"],
+        templates: []
+      };
+    })();
     return {
       meta: {
         "revision": "Ember@2.9.1",
@@ -4864,7 +4926,7 @@ define("git-site/templates/index", ["exports"], function (exports) {
             "column": 0
           },
           "end": {
-            "line": 25,
+            "line": 32,
             "column": 0
           }
         },
@@ -4902,31 +4964,6 @@ define("git-site/templates/index", ["exports"], function (exports) {
         dom.setAttribute(el3, "class", "col-md-6");
         var el4 = dom.createTextNode("\n      ");
         dom.appendChild(el3, el4);
-        var el4 = dom.createElement("h2");
-        var el5 = dom.createTextNode("About Me");
-        dom.appendChild(el4, el5);
-        dom.appendChild(el3, el4);
-        var el4 = dom.createTextNode("\n      ");
-        dom.appendChild(el3, el4);
-        var el4 = dom.createElement("p");
-        var el5 = dom.createTextNode("I recently graduated from Northwest Technical Institute,\n        where I studied Information Systems. At NTI we learned\n        Network Administration, DataBase Administration, Project Life Cycles,\n        Computer Repair and Software Design--");
-        dom.appendChild(el4, el5);
-        var el5 = dom.createElement("em");
-        var el6 = dom.createTextNode("my passion");
-        dom.appendChild(el5, el6);
-        dom.appendChild(el4, el5);
-        var el5 = dom.createTextNode(".\n      ");
-        dom.appendChild(el4, el5);
-        dom.appendChild(el3, el4);
-        var el4 = dom.createTextNode("\n    ");
-        dom.appendChild(el3, el4);
-        dom.appendChild(el2, el3);
-        var el3 = dom.createTextNode("\n    ");
-        dom.appendChild(el2, el3);
-        var el3 = dom.createElement("div");
-        dom.setAttribute(el3, "class", "col-md-6");
-        var el4 = dom.createTextNode("\n      ");
-        dom.appendChild(el3, el4);
         var el4 = dom.createElement("br");
         dom.appendChild(el3, el4);
         var el4 = dom.createTextNode("\n      ");
@@ -4950,6 +4987,56 @@ define("git-site/templates/index", ["exports"], function (exports) {
         var el4 = dom.createTextNode("\n    ");
         dom.appendChild(el3, el4);
         dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("    \n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("div");
+        dom.setAttribute(el3, "class", "col-md-6");
+        var el4 = dom.createTextNode("\n      ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("h2");
+        var el5 = dom.createTextNode("About Me");
+        dom.appendChild(el4, el5);
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n      ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("p");
+        var el5 = dom.createComment("");
+        dom.appendChild(el4, el5);
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n\n      ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("div");
+        dom.setAttribute(el4, "class", "panel panel-default");
+        var el5 = dom.createTextNode("\n        ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("div");
+        dom.setAttribute(el5, "class", "panel-heading");
+        var el6 = dom.createTextNode("Familar Technology");
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n        ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("div");
+        dom.setAttribute(el5, "class", "panel-body");
+        var el6 = dom.createTextNode("\n          ");
+        dom.appendChild(el5, el6);
+        var el6 = dom.createElement("ul");
+        var el7 = dom.createTextNode("\n");
+        dom.appendChild(el6, el7);
+        var el7 = dom.createComment("");
+        dom.appendChild(el6, el7);
+        var el7 = dom.createTextNode("          ");
+        dom.appendChild(el6, el7);
+        dom.appendChild(el5, el6);
+        var el6 = dom.createTextNode("\n        ");
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n      ");
+        dom.appendChild(el4, el5);
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n    ");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
         var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
@@ -4960,12 +5047,16 @@ define("git-site/templates/index", ["exports"], function (exports) {
         dom.appendChild(el0, el1);
         return el0;
       },
-      buildRenderNodes: function buildRenderNodes() {
-        return [];
+      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+        var element0 = dom.childAt(fragment, [0, 3, 3]);
+        var morphs = new Array(2);
+        morphs[0] = dom.createMorphAt(dom.childAt(element0, [3]), 0, 0);
+        morphs[1] = dom.createMorphAt(dom.childAt(element0, [5, 3, 1]), 1, 1);
+        return morphs;
       },
-      statements: [],
+      statements: [["content", "message", ["loc", [null, [17, 9], [17, 22]]], 0, 0, 0, 0], ["block", "each", [["get", "technology", ["loc", [null, [23, 20], [23, 30]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [23, 12], [25, 21]]]]],
       locals: [],
-      templates: []
+      templates: [child0]
     };
   })());
 });
@@ -5005,7 +5096,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("git-site/app")["default"].create({"name":"git-site","version":"0.0.0+3e873022"});
+  require("git-site/app")["default"].create({"name":"git-site","version":"0.0.0+15eeae9b"});
 }
 
 /* jshint ignore:end */
