@@ -1,30 +1,99 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>aFraley On Github</title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>aFraley — Geospatial Software Engineer</title>
+    <meta name="description" content="Senior full-stack engineer building geospatial platforms — Mapbox GL, PostGIS, PDAL, ODM, Django, Vue.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        (function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)})()
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="container nav-inner">
+            <a href="#" class="brand">aFraley</a>
+            <div class="nav-links">
+                <a href="#work">Work</a>
+                <a href="https://github.com/aFraley" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <button id="theme-toggle" type="button" aria-label="Toggle dark mode">&#9790;</button>
+            </div>
+        </div>
+    </nav>
 
-    
-<meta name="git-site/config/environment" content="%7B%22modulePrefix%22%3A%22git-site%22%2C%22environment%22%3A%22development%22%2C%22rootURL%22%3A%22/%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%7D%2C%22APP%22%3A%7B%22name%22%3A%22git-site%22%2C%22version%22%3A%220.0.0+cf44b754%22%7D%2C%22exportApplicationGlobal%22%3Atrue%7D" />
+    <main class="container">
+        <section class="hero" id="home">
+            <h1>aFraley <span>on Github</span></h1>
+            <p class="subtitle">Senior Full-Stack Engineer · Geospatial Systems</p>
+            <blockquote>
+                <p>We can only see a short distance ahead, but we can see plenty there that needs to be done.</p>
+                <cite>Alan Turing</cite>
+            </blockquote>
+        </section>
 
-    <link rel="stylesheet" href="/assets/vendor.css">
-    <link rel="stylesheet" href="/assets/git-site.css">
+        <section id="work">
+            <h2>Geospatial Engineering</h2>
+            <p class="lead">I build end-to-end platforms that turn raw drone, sensor, and imagery data into survey-grade deliverables &mdash; from interactive map-based editing UIs to PostGIS-backed APIs and cloud photogrammetry pipelines.</p>
 
-    
-  </head>
-  <body>
-    
+            <article class="capability">
+                <h3>Interactive 2D Editing &amp; QC</h3>
+                <p>Mapbox GL + Canvas tooling for drawing flight plans, defining survey extents, and reviewing ML-detected polygons over orthomosaic backdrops. Snapping, multi-polygon operations, and coordinate transforms between pixel, image, and world frames.</p>
+            </article>
 
-    <script src="/assets/vendor.js"></script>
-    <script src="/assets/git-site.js"></script>
+            <article class="capability">
+                <h3>Spatial Data Layer</h3>
+                <p>PostGIS schemas and spatial indexes tuned for multi-million-row thermal image tables, deck geometry, and corridor polygons. R-tree, kd-tree, and quadtree lookups, coordinate system transforms, and geometry-heavy query optimization.</p>
+            </article>
 
+            <article class="capability">
+                <h3>Cloud Photogrammetry Pipelines</h3>
+                <p>PDAL and ODM pipelines producing orthomosaics (COG), classified point clouds (LAZ/COPC), and textured 3D meshes (glTF/GLB). Celery-orchestrated ingestion from raw capture through ML tagging to QC'd deliverable on Kubernetes/EKS.</p>
+            </article>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+            <article class="capability">
+                <h3>3D Rendering &amp; Mesh/Point-Cloud Editing</h3>
+                <p>Browser-based three.js viewers for inspecting and editing textured meshes (glTF/GLB) and classified point clouds (LAZ/COPC) alongside their 2D counterparts. Selection, measurement, and classification tooling over streamed tiles, with camera, coordinate, and picking logic shared across 2D/3D views. Prototyping Gaussian splatting as an additional deliverable format.</p>
+            </article>
 
-    
-  </body>
+            <div class="tech-section">
+                <h3>Stack</h3>
+                <div class="pills">
+                    <span>PostGIS</span>
+                    <span>GeoPandas</span>
+                    <span>GDAL/OGR</span>
+                    <span>PDAL</span>
+                    <span>ODM</span>
+                    <span>Mapbox GL JS</span>
+                    <span>Leaflet</span>
+                    <span>Canvas/WebGL</span>
+                    <span>three.js</span>
+                    <span>Django / DRF</span>
+                    <span>FastAPI</span>
+                    <span>Go &amp; Gin</span>
+                    <span>Vue</span>
+                    <span>React</span>
+                    <span>Celery</span>
+                    <span>Kubernetes</span>
+                    <span>AWS EKS / S3</span>
+                    <span>Python</span>
+                    <span>TypeScript</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+            <a href="https://github.com/aFraley">GitHub</a>
+            <a href="https://www.linkedin.com/in/afraley/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
 </html>
