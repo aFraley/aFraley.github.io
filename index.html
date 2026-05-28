@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>aFraley — Geospatial Software Engineer</title>
-    <meta name="description" content="Senior full-stack engineer building geospatial platforms — Mapbox GL, PostGIS, PDAL, ODM, Django, Vue.">
+    <title>aFraley · Senior Full-Stack Engineer</title>
+    <meta name="description" content="Senior full-stack engineer and architect. Python/Django, Vue and React, PostGIS, and AWS, with focus areas in geospatial systems and AI-assisted development.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@400;500&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@
     <main class="container">
         <section class="hero" id="home">
             <h1>aFraley <span>on Github</span></h1>
-            <p class="subtitle">Senior Full-Stack Engineer · Geospatial Systems</p>
+            <p class="subtitle">Senior Full-Stack Engineer &amp; Architect · Python/Django · AWS · Geospatial</p>
             <blockquote>
                 <p>We can only see a short distance ahead, but we can see plenty there that needs to be done.</p>
                 <cite>Alan Turing</cite>
@@ -36,53 +36,110 @@
         </section>
 
         <section id="work">
-            <h2>Geospatial Engineering</h2>
-            <p class="lead">I build end-to-end platforms that turn raw drone, sensor, and imagery data into survey-grade deliverables &mdash; from interactive map-based editing UIs to PostGIS-backed APIs and cloud photogrammetry pipelines.</p>
+            <h2>What I Build</h2>
+            <p class="lead">Senior full-stack engineer and architect with 9 years building production systems across the stack: Python/Django and FastAPI on the backend, Vue and React on the frontend, PostgreSQL/PostGIS for data, and AWS for infrastructure. Geospatial and drone-based platforms are where I have gone deepest, turning raw sensor and imagery data into survey-grade deliverables.</p>
 
             <article class="capability">
-                <h3>Interactive 2D Editing &amp; QC</h3>
-                <p>Mapbox GL + Canvas tooling for drawing flight plans, defining survey extents, and reviewing ML-detected polygons over orthomosaic backdrops. Snapping, multi-polygon operations, and coordinate transforms between pixel, image, and world frames.</p>
+                <h3>Backend &amp; APIs</h3>
+                <p>Django and Django REST Framework, plus FastAPI, backed by PostgreSQL. Schema design and query optimization on multi-million-row tables, REST API design, background processing with Celery, and production transactional email infrastructure on Amazon SES with SNS/CloudWatch reputation monitoring.</p>
             </article>
 
             <article class="capability">
-                <h3>Spatial Data Layer</h3>
-                <p>PostGIS schemas and spatial indexes tuned for multi-million-row thermal image tables, deck geometry, and corridor polygons. R-tree, kd-tree, and quadtree lookups, coordinate system transforms, and geometry-heavy query optimization.</p>
+                <h3>Frontend &amp; Interfaces</h3>
+                <p>Vue and React applications, from CRUD product surfaces to data-heavy interactive tooling. Comfortable with Canvas and WebGL when the UI gets demanding, and focused on interfaces that non-engineers can actually use.</p>
             </article>
 
             <article class="capability">
-                <h3>Cloud Photogrammetry Pipelines</h3>
-                <p>PDAL and ODM pipelines producing orthomosaics (COG), classified point clouds (LAZ/COPC), and textured 3D meshes (glTF/GLB). Celery-orchestrated ingestion from raw capture through ML tagging to QC'd deliverable on Kubernetes/EKS.</p>
+                <h3>Cloud &amp; Infrastructure</h3>
+                <p>AWS across EKS, Lambda, and the serverless ecosystem, with Docker, Kubernetes, and CI/CD pipelines. Architecture decisions made to hold up under real customer load, plus MQTT-based IoT for real-time command, control, and telemetry.</p>
             </article>
 
             <article class="capability">
-                <h3>3D Rendering &amp; Mesh/Point-Cloud Editing</h3>
-                <p>Browser-based three.js viewers for inspecting and editing textured meshes (glTF/GLB) and classified point clouds (LAZ/COPC) alongside their 2D counterparts. Selection, measurement, and classification tooling over streamed tiles, with camera, coordinate, and picking logic shared across 2D/3D views. Prototyping Gaussian splatting as an additional deliverable format.</p>
+                <h3>Data &amp; ETL</h3>
+                <p>ETL pipelines and data at scale: PostgreSQL/PostGIS schema and index design, GeoPandas and GDAL for transforms, and Prefect- and Celery-orchestrated ingestion from raw input through processing to a QC'd result, with MLflow for experiment and model tracking. Transferable data-engineering fundamentals whatever the domain.</p>
             </article>
+
+            <article class="capability">
+                <h3>Geospatial &amp; 3D</h3>
+                <p>My deepest specialty, and an uncommon one. At Alynix I was a lead full-stack developer and architect on Decker, a mission-planning platform for bridge inspection: users plan whole corridors of bridges, upload the data once flown, and get a report that is downloadable and viewable live in the app, with contours rendered over a cloud-optimized GeoTIFF. A map interface shows where each plan sits and drives the reports the same way. The broader work spans photogrammetry pipelines (PDAL, GDAL, ODM), point clouds, and interactive Mapbox GL and three.js interfaces, the kind of background that is rare when a role calls for spatial or infrastructure data.</p>
+            </article>
+
+            <div class="tech">
+            <div class="tech-section">
+                <h3>Languages</h3>
+                <div class="pills">
+                    <span>Python</span>
+                    <span>TypeScript</span>
+                    <span>Go</span>
+                    <span>Java</span>
+                    <span>C / C++</span>
+                    <span>SQL</span>
+                </div>
+            </div>
 
             <div class="tech-section">
-                <h3>Stack</h3>
+                <h3>Backend</h3>
+                <div class="pills">
+                    <span>Django / DRF</span>
+                    <span>FastAPI</span>
+                    <span>Celery</span>
+                    <span>RabbitMQ</span>
+                    <span>Redis</span>
+                    <span>Prefect</span>
+                </div>
+            </div>
+
+            <div class="tech-section">
+                <h3>Data &amp; ML</h3>
+                <div class="pills">
+                    <span>PostgreSQL</span>
+                    <span>NumPy / Pandas</span>
+                    <span>OpenCV</span>
+                    <span>MLflow</span>
+                </div>
+            </div>
+
+            <div class="tech-section">
+                <h3>Frontend</h3>
+                <div class="pills">
+                    <span>Vue</span>
+                    <span>React</span>
+                    <span>Mapbox GL</span>
+                    <span>three.js</span>
+                </div>
+            </div>
+
+            <div class="tech-section">
+                <h3>Infrastructure &amp; Cloud</h3>
+                <div class="pills">
+                    <span>Docker</span>
+                    <span>Kubernetes</span>
+                    <span>AWS (EKS, Lambda, RDS, S3, Route 53, SES, SNS, CloudWatch, IAM)</span>
+                    <span>MQTT</span>
+                    <span>CI/CD</span>
+                </div>
+            </div>
+
+            <div class="tech-section">
+                <h3>Geospatial</h3>
                 <div class="pills">
                     <span>PostGIS</span>
                     <span>GeoPandas</span>
-                    <span>GDAL/OGR</span>
-                    <span>PDAL</span>
-                    <span>ODM</span>
-                    <span>Mapbox GL JS</span>
-                    <span>Leaflet</span>
-                    <span>Canvas/WebGL</span>
-                    <span>three.js</span>
-                    <span>Django / DRF</span>
-                    <span>FastAPI</span>
-                    <span>Go &amp; Gin</span>
-                    <span>Vue</span>
-                    <span>React</span>
-                    <span>Celery</span>
-                    <span>Kubernetes</span>
-                    <span>AWS EKS / S3</span>
-                    <span>Python</span>
-                    <span>TypeScript</span>
+                    <span>PDAL / GDAL / ODM</span>
+                    <span>ExifTool</span>
                 </div>
             </div>
+            </div>
+        </section>
+
+        <section id="how">
+            <h2>How I Work</h2>
+            <p class="lead">I have refined AI-assisted development into a repeatable engineering practice, not a novelty. GitHub issues serve as specs, Claude Opus sessions handle planning and implementation, and structured prompting keeps a clean line of traceability from requirement through to a reviewable PR. I shared the workflow with colleagues at Alynix and contributed to the internal evaluation of agentic coding tools. The throughput is real, but the discipline matters more: small reviewable changes, tests that mean something, and architecture decisions that hold up under real customer load.</p>
+
+            <blockquote class="endorsement">
+                <p>"Engineers of his caliber are rare, and engineers I would trust as completely as I trust Alan are rarer still. He made architectural decisions that have aged exceptionally well under real customer load."</p>
+                <p class="meta">Casey Kinsey, Chief Technology Officer, Alynix</p>
+            </blockquote>
         </section>
 
     </main>
@@ -90,7 +147,7 @@
     <footer>
         <div class="container footer-inner">
             <a href="https://github.com/aFraley">GitHub</a>
-            <a href="https://www.linkedin.com/in/afraley/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/alan-fraley-6a3533124/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
     </footer>
 

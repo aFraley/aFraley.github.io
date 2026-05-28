@@ -192,6 +192,45 @@ section h2 {
     font-weight: 400;
     margin-bottom: 2rem;
     color: var(--text);
+    position: relative;
+    padding-left: 1rem;
+}
+
+section h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.35em;
+    bottom: 0.35em;
+    width: 3px;
+    border-radius: 2px;
+    background: var(--accent);
+}
+
+/* ---- ENDORSEMENT ---- */
+
+.endorsement {
+    margin-top: 2.5rem;
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--accent);
+    transition: border-color 0.3s ease;
+}
+
+.endorsement p {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--text);
+}
+
+.endorsement .meta {
+    font-family: 'Karla', sans-serif;
+    font-style: normal;
+    font-size: 0.8125rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 0.6rem;
 }
 
 /* ---- WORK ---- */
@@ -213,6 +252,14 @@ section h2 {
 
 .capability:hover {
     border-left-color: var(--accent);
+}
+
+.capability:hover h3 {
+    color: var(--accent);
+}
+
+.capability h3 {
+    transition: color 0.2s ease;
 }
 
 .capability h3 {
@@ -277,16 +324,28 @@ code {
 
 /* ---- TECH PILLS ---- */
 
+.tech {
+    margin-top: 2.75rem;
+    border-top: 1px solid var(--border);
+    transition: border-color 0.3s ease;
+}
+
 .tech-section {
-    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: 8.5rem 1fr;
+    gap: 1rem 1.5rem;
+    align-items: baseline;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--border);
+    transition: border-color 0.3s ease;
 }
 
 .tech-section h3 {
     font-family: 'Instrument Serif', serif;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 400;
-    margin-bottom: 0.75rem;
-    color: var(--text);
+    color: var(--text-secondary);
+    margin: 0;
 }
 
 .pills {
@@ -302,8 +361,21 @@ code {
     border-radius: 100px;
     background: var(--pill-bg);
     color: var(--text-secondary);
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
     white-space: nowrap;
+}
+
+.pills span:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+    .tech-section {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+    }
 }
 
 /* ---- WRITING ---- */
