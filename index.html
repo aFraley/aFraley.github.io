@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>aFraley · Senior Platform / Backend Engineer</title>
-    <meta name="description" content="Senior platform and backend engineer. Python/Django and DRF, PostgreSQL/PostGIS, and AWS, with a deep focus on geospatial systems and production infrastructure.">
+    <title>aFraley · Senior Full-Stack Engineer</title>
+    <meta name="description" content="Senior full-stack engineer. Python/Django, Vue and React, PostgreSQL/PostGIS. Builds production products end to end, with depth in geospatial, computer vision, and drone data pipelines.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@400;500&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@
     <main class="container">
         <section class="hero" id="home">
             <h1>aFraley <span>on Github</span></h1>
-            <p class="subtitle">Senior Platform / Backend Engineer · Python/Django · PostGIS · AWS</p>
+            <p class="subtitle">Senior Full-Stack Engineer · Python/Django · Vue/React · PostgreSQL/PostGIS</p>
             <blockquote>
                 <p>We can only see a short distance ahead, but we can see plenty there that needs to be done.</p>
                 <cite>Alan Turing</cite>
@@ -37,31 +37,36 @@
 
         <section id="work">
             <h2>What I Build</h2>
-            <p class="lead">Senior engineer with 9 years building and operating production Python systems on AWS — cloud infrastructure, Django/DRF backends, PostgreSQL/PostGIS data modeling, and data pipelines. Equally at home owning EKS/RDS production infrastructure or designing the APIs and schemas behind customer-facing products. Geospatial and drone-based platforms are where I have gone deepest, turning raw sensor and imagery data into survey-grade deliverables.</p>
+            <p class="lead">I build production software end to end: the interface someone uses, the API and data model behind it, the pipeline feeding it, and the infrastructure holding it up. Nine-plus years of Python and Django on the backend, Vue and React on the frontend, and PostgreSQL/PostGIS underneath, mostly on systems where something physical depends on the answer being right. Geospatial, computer vision, and drone data are where I have gone deepest.</p>
 
             <article class="capability">
-                <h3>Backend &amp; APIs</h3>
-                <p>Django and Django REST Framework are the core of my work, backed by PostgreSQL/PostGIS. Multi-tenant architecture with organization-scoped access control, schema design and query optimization on multi-million-row tables, REST API design, background processing with Celery, and production transactional email on Amazon SES with SNS/CloudWatch reputation monitoring. FastAPI, Java/Spring Boot, and Go when a service calls for it.</p>
-            </article>
-
-            <article class="capability">
-                <h3>Geospatial &amp; 3D</h3>
-                <p>My deepest specialty, and an uncommon one. At Alynix I was a lead developer and architect on Decker, a mission-planning platform for bridge inspection: users plan whole corridors of bridges, upload the data once flown, and get a report that is downloadable and viewable live in the app, with contours rendered over a cloud-optimized GeoTIFF. A map interface shows where each plan sits and drives the reports the same way. The broader work spans PostGIS raster and geospatial processing, photogrammetry pipelines (PDAL, GDAL, ODM, GeoPandas), point clouds, and interactive Mapbox GL and three.js interfaces — the kind of background that is rare when a role calls for spatial or infrastructure data.</p>
-            </article>
-
-            <article class="capability">
-                <h3>Cloud &amp; Infrastructure</h3>
-                <p>Owned production AWS across EKS, EC2, RDS, Lambda and the serverless stack, Route 53, S3, SES, Secrets Manager/KMS, and CloudWatch — provisioned as code with Terraform and Ansible, containerized with Docker, and orchestrated on Kubernetes with CI/CD. Led a cost-and-consolidation initiative onto a shared multi-tenant Postgres RDS and executed near-zero-downtime database migrations of multi-GB PostGIS data, with documented runbooks and rollback snapshots. Plus MQTT-based IoT for real-time command, control, and telemetry.</p>
-            </article>
-
-            <article class="capability">
-                <h3>Data &amp; ETL</h3>
-                <p>ETL and data-ingestion pipelines at scale: PostgreSQL/PostGIS schema and index design, GeoPandas and GDAL for transforms, and Prefect- and Celery-orchestrated ingestion from raw input through processing to a QC'd result, with MLflow for experiment and model tracking. Transferable data-engineering fundamentals whatever the domain.</p>
+                <h3>Products, End to End</h3>
+                <p>At Alynix I was lead full-stack developer and architect across three drone-inspection products, reporting to the CTO. <a href="https://alynix.com/decker-bridge-deck-inspection/" target="_blank" rel="noopener noreferrer">Decker</a>, a bridge deck inspection platform, I built from the data model up: Django/DRF and Java/Spring APIs, a multi-tenant PostGIS model with organization-scoped access control, and a Vue 3 frontend covering flight planning, project management, and report visualization. Users plan whole corridors of bridges, upload the data once flown, and get a report viewable live in the app, with thermal deck maps rendered over a cloud-optimized GeoTIFF. It shipped to DOT pilots in multiple states. Alongside it: Decker FlightOps, an MQTT command-and-control and telemetry system for the drone fleet, and GroundControl, a photogrammetry and 3D visualization platform for civil engineering.</p>
             </article>
 
             <article class="capability">
                 <h3>Frontend &amp; Interfaces</h3>
-                <p>Vue 3 and React round out the product surface on top of the backend — from CRUD to data-heavy interactive tooling, including Mapbox GL and three.js for spatial and 3D views. Focused on interfaces that non-engineers can actually use.</p>
+                <p>Vue 3 is my production depth, with React and React Native across years of client work. The interfaces I like building are the data-heavy ones that non-engineers have to actually use: map-driven dashboards in Mapbox GL and MapLibre, point cloud and 3D scene views in three.js, and a drag-and-drop pipeline builder that let customers compose their own photogrammetry processing instead of fighting rigid presets.</p>
+            </article>
+
+            <article class="capability">
+                <h3>Backend &amp; Data</h3>
+                <p>Django and Django REST Framework backed by PostgreSQL/PostGIS are the core of my work: multi-tenant architecture, schema design and query tuning on large spatial tables, REST API design, and background processing with Celery. Java/Spring Boot, FastAPI, and Go when a service calls for it. Ingestion pipelines orchestrated with Prefect and Celery take raw input through processing to a checked result.</p>
+            </article>
+
+            <article class="capability">
+                <h3>Imagery, Computer Vision &amp; Geospatial</h3>
+                <p>I architected and built Decker's thermal imaging pipeline: drone-captured infrared imagery every 30 minutes through the day, stitched across thousands of frames, filtered to remove vehicles and people, and analyzed as a time series to find subsurface defects, with parallel processing so multiple inspections run concurrently. It cut manual review from weeks to days. For GroundControl, ETL pipelines producing point clouds, classified point clouds, and orthorectified imagery with PDAL, ODM, and GeoPandas. Satellite work too: Sentinel-2 and Sentinel-1 SAR, STAC, and COGs.</p>
+            </article>
+
+            <article class="capability">
+                <h3>Infrastructure Under It</h3>
+                <p>I run what I build. Production AWS (EKS, RDS, Lambda, S3, SES) provisioned with Terraform, containerized with Docker, and deployed on Kubernetes with CI/CD. At Alynix that included consolidating services onto a shared multi-tenant Postgres RDS and near-zero-downtime migrations of multi-GB PostGIS databases, with runbooks and rollback snapshots.</p>
+            </article>
+
+            <article class="capability">
+                <h3>Current Side Project</h3>
+                <p>Pro bono, I am architecting and building an agricultural decision-support platform for the Eswatini Ministry of Agriculture: Dockerized Django, PostGIS, Vue 3, and MapLibre, ingesting Sentinel-2, Sentinel-1 SAR, and FEWS NET anomaly COGs behind a PostGIS zonal rollup API.</p>
             </article>
 
             <div class="tech">
@@ -69,11 +74,10 @@
                 <h3>Languages</h3>
                 <div class="pills">
                     <span>Python</span>
-                    <span>TypeScript</span>
-                    <span>Go</span>
-                    <span>Java</span>
-                    <span>C / C++</span>
+                    <span>TypeScript / JavaScript</span>
                     <span>SQL</span>
+                    <span>Java</span>
+                    <span>Go</span>
                 </div>
             </div>
 
@@ -82,53 +86,46 @@
                 <div class="pills">
                     <span>Django / DRF</span>
                     <span>FastAPI</span>
+                    <span>Spring Boot</span>
                     <span>Celery</span>
-                    <span>RabbitMQ</span>
                     <span>Redis</span>
                     <span>Prefect</span>
                 </div>
             </div>
 
             <div class="tech-section">
-                <h3>Data &amp; ML</h3>
-                <div class="pills">
-                    <span>PostgreSQL</span>
-                    <span>NumPy / Pandas</span>
-                    <span>OpenCV</span>
-                    <span>MLflow</span>
-                </div>
-            </div>
-
-            <div class="tech-section">
                 <h3>Frontend</h3>
                 <div class="pills">
-                    <span>Vue</span>
+                    <span>Vue 3</span>
                     <span>React</span>
                     <span>Mapbox GL</span>
+                    <span>MapLibre</span>
                     <span>three.js</span>
                 </div>
             </div>
 
             <div class="tech-section">
-                <h3>Infrastructure &amp; Cloud</h3>
+                <h3>Data &amp; Imagery</h3>
                 <div class="pills">
-                    <span>AWS (EKS, EC2, Lambda, RDS, S3, Route 53, SES, SNS, Secrets Manager, KMS, CloudWatch, IAM)</span>
-                    <span>Terraform</span>
-                    <span>Ansible</span>
-                    <span>Docker</span>
-                    <span>Kubernetes</span>
-                    <span>MQTT</span>
-                    <span>CI/CD</span>
+                    <span>PostgreSQL</span>
+                    <span>PostGIS</span>
+                    <span>GeoPandas</span>
+                    <span>PDAL / GDAL / ODM</span>
+                    <span>OpenCV</span>
+                    <span>NumPy / Pandas</span>
+                    <span>MLflow</span>
                 </div>
             </div>
 
             <div class="tech-section">
-                <h3>Geospatial</h3>
+                <h3>Infrastructure</h3>
                 <div class="pills">
-                    <span>PostGIS</span>
-                    <span>GeoPandas</span>
-                    <span>PDAL / GDAL / ODM</span>
-                    <span>ExifTool</span>
+                    <span>AWS</span>
+                    <span>Terraform</span>
+                    <span>Docker</span>
+                    <span>Kubernetes</span>
+                    <span>CI/CD</span>
+                    <span>MQTT</span>
                 </div>
             </div>
             </div>
@@ -136,10 +133,10 @@
 
         <section id="how">
             <h2>How I Work</h2>
-            <p class="lead">Pragmatic architecture that ages well under real customer load: small reviewable changes, tests that mean something, clear communication with technical and non-technical stakeholders, and a willingness to own the unglamorous reliability and cost work. I also mentor engineers and have refined AI-assisted development into a repeatable, review-friendly practice — GitHub issues as specs, structured prompting for requirement-to-PR traceability, and clear trust boundaries on model output — which I shared with colleagues at Alynix while contributing to the internal evaluation of agentic coding tools.</p>
+            <p class="lead">I like being the person who decides how a system should be built, writes it down, and then builds it. Small reviewable changes, tests that mean something, and clear communication with technical and non-technical people alike. I mentor engineers, and I have turned AI-assisted development into a repeatable, review-friendly practice: GitHub issues as specs, structured prompting for requirement-to-PR traceability, and clear trust boundaries on model output.</p>
 
             <blockquote class="endorsement">
-                <p>"Engineers of his caliber are rare, and engineers I would trust as completely as I trust Alan are rarer still. He made architectural decisions that have aged exceptionally well under real customer load."</p>
+                <p>"Engineers of his caliber are rare, and engineers I would trust as completely as I trust Alan are rarer still. &hellip; His mastery of Python and Django and his fluency in Vue.js form the technical core of nearly every customer-facing system we built."</p>
                 <p class="meta">Casey Kinsey, Chief Technology Officer, Alynix</p>
             </blockquote>
         </section>
@@ -149,7 +146,8 @@
     <footer>
         <div class="container footer-inner">
             <a href="https://github.com/aFraley">GitHub</a>
-            <a href="https://www.linkedin.com/in/alan-fraley-6a3533124/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/alanfraley/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <span class="meta">Northwest Arkansas · Central time</span>
         </div>
     </footer>
 
